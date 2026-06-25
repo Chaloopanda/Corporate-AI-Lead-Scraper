@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*$py.class
+corporate_remote_leads.md
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/

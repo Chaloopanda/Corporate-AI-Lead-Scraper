@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lead Scraper</title>
+    <!-- Google Fonts for premium typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    
+    <main class="glass-container">
+        <header>
+            <h1>Research Internship <span>Scraper</span></h1>
+            <p>Automated intelligence gathering for AI research and engineering internships.</p>
+        </header>
+
+        <section class="input-section">
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 1rem;">
+                The Discovery Engine will hunt down remote-friendly, Tier-3 accessible AI startups matching your specific niche (Computer Vision, Edge AI, Trustworthy AI) across the web.
+            </p>
+            <div class="actions" style="justify-content: center;">
+                <button id="runBtn" class="btn primary-btn" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    <span class="btn-text">Start Niche Discovery</span>
+                    <div class="spinner hidden" id="loadingSpinner"></div>
+                </button>
+            </div>
+        </section>
+
+        <section class="results-section hidden" id="resultsSection">
+            <div class="results-header">
+                <h2>Results <span id="counter" class="badge">0</span></h2>
+                <button id="exportBtn" class="btn secondary-btn">Export to Markdown</button>
+            </div>
+            
+            <div class="table-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Affiliation</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Work Model</th>
+                            <th>Internship</th>
+                            <th>Match</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Dynamic rows will appear here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
